@@ -1,1 +1,1 @@
-// Ini file Javascript
+// Ini file Javascript.
