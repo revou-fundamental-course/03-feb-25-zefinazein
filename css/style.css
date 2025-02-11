@@ -9,17 +9,8 @@
 body{
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(46, 59, 142); */
     background: url(mountain.jpg);
 }
-
-/* .container{
-    display: flex;
-    flex-direction: column;
-    background-color: blanchedalmond;
-    width: 100vw;
-    min-height: 100vh;
-} */
 
 /* header */
 header{
@@ -38,6 +29,7 @@ header h1{
     color: white;
     font-weight: 200;
     font-size: 2rem;
+    cursor: default;
 }
 
 /* main */
@@ -55,14 +47,13 @@ main{
 }
 
 .instruksi{
-    /* background-color: aqua; */
     padding: 0.5rem;
     text-align: center;
 }
 
 .input, .output, .kalkulasi{
     padding: 0.5rem;
-    margin: 0.5rem;
+    margin: 0.3rem 0.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -73,14 +64,9 @@ main{
     border-radius: 25rem;
 }
 
-.input{
-    /* background-color: azure; */
-}
-
 .tombol{
     display: flex;
     justify-content: center;
-    /* background-color: beige; */
     margin-top: 1rem;
 }
 
@@ -99,11 +85,10 @@ main{
 }
 
 .output{
-    /* background-color: brown; */
+    padding-top: 0.02rem;
 }
 
 .kalkulasi{
-    /* background-color: blanchedalmond; */
     margin-bottom: 0.1rem;
 }
 
@@ -111,11 +96,27 @@ article h2{
     margin-bottom: 0.5rem;
     font-weight: 100;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* background-color: aliceblue; */
+    cursor: default;
 }
 
-article .rumus{
+.c-f, .f-c{
     margin-top: 0.5rem;
+}
+
+.f-ke-c, .c-ke-f{
+    margin: 0.05rem 0rem;
+    font-size: 0.9rem;
+    color: rgb(76, 176, 199);
+    font-weight: 700;
+}
+
+.f-ke-c:hover, .c-ke-f:hover{
+    color: rgb(168, 115, 218);
+    cursor: pointer;
+}
+
+.active{
+    display: none;
 }
 
 /* footer */
@@ -124,8 +125,11 @@ footer{
     margin-bottom: 0rem;
     text-align: center;
     width: 100%;
-    /* position: absolute; */
-    /* bottom: 0rem; */
     color: white;
-    /* background-color: grey; */
+}
+
+@media (max-width: 700px){
+    header, main{
+        width: 80%;
+    }
 }

@@ -29,9 +29,9 @@
                     <label for="input-celcius">Celcius (&deg;C):</label>
                     <input type="number" name="input-suhu" id="input-celcius" class="textbox">
                     <div class="tombol">
-                        <button>Konversi</button>
-                        <button> Reset</button>
-                        <button>Reverse</button>
+                        <button class="tombol-konversi">Konversi</button>
+                        <button class="tombol-reset"> Reset</button>
+                        <button class="tombol-reverse">Reverse</button>
                     </div>
                 </div>
 
@@ -48,13 +48,20 @@
         </section>
 
         <article class="cara-konversi">
-            <h2>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit(&deg;F)</h2>
+            <span class="f-ke-c">Fahrenheit ke Celcius</span>
+            <span class="c-ke-f active">Celcius ke Fahrenheit</span>
+            <h2 class="cara-c-f">Cara Konversi dari Celcius (&deg;C) ke Fahrenheit(&deg;F)</h2>
+            <h2 class="cara-f-c active">Cara Konversi dari Fahrenheit(&deg;F) ke Celcius (&deg;C)</h2>
             <hr>
-            <div class="rumus">
+            <div class="c-f">
                 <p>Suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) sama dengan suhu <i>S</i> dalam derajat Celsius (&deg;C) kali 9/5 tambah 32.</p>
                 <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times 9/5) + 32</p>
                 <p>atau</p>
                 <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times 1.8) + 32</p>
+            </div>
+            <div class="f-c active">
+                <p>Suhu <i>S</i> dalam derajat Celsius (&deg;C) sama dengan suhu <i>S</i> dalam derajat Fahrenheit (&deg;F) kurang 32 kali 5/9.</p>
+                <p>S<sub>(&deg;C)</sub> = (S<sub>(&deg;F)</sub> - 32) &times 5/9</p>
             </div>
         </article>
     </main>
@@ -62,5 +69,7 @@
     <footer>
         <p>Made by Zefina@2025</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
