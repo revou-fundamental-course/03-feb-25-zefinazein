@@ -21,7 +21,7 @@ header{
     border: 0.1rem solid white;
     margin: 0.5rem auto;
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin-top: 1.3rem;
 }
 
 header h1{
@@ -108,11 +108,11 @@ article h2{
     font-size: 0.9rem;
     color: rgb(76, 176, 199);
     font-weight: 700;
+    cursor: pointer;
 }
 
 .f-ke-c:hover, .c-ke-f:hover{
     color: rgb(168, 115, 218);
-    cursor: pointer;
 }
 
 .active{
