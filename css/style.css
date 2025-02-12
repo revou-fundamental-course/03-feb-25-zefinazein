@@ -58,6 +58,20 @@ main{
     flex-direction: column;
 }
 
+.exception{
+    color: rgb(218, 88, 88);
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+span.active-except{
+    display: none;
+}
+
+input.act-except{
+    border: 0.2rem solid rgb(218, 88, 88);
+}
+
 .textbox{
     padding: 0.8rem;
     border: 0.2rem solid rgb(208, 208, 208);

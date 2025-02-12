@@ -1,6 +1,8 @@
 const tombolKonversi = document.querySelector('.tombol-konversi');
 const tombolReset = document.querySelector('.tombol-reset');
 const tombolReverse = document.querySelector('.tombol-reverse');
+const except = document.querySelector('.exception');
+const exceptBorder = document.querySelector('.textbox');
 
 let labelCelcius = document.querySelector('label[for=input-celcius]');
 let labelFahrenheit = document.querySelector('label[for=output-fahrenheit]');
@@ -12,8 +14,14 @@ function konversiSuhu(){
     let value = textCelcius.value.trim();
 
     if(isNaN(value) || value === ""){
-        alert('Mohon masukkan input angka !!!');
+        except.classList.toggle('active-except');
+        exceptBorder.classList.toggle('act-except');
         return;
+    }
+
+    if(!except.classList.contains('active-except')){
+        except.classList.toggle('active-except');
+        exceptBorder.classList.toggle('act-except');
     }
 
     if(labelCelcius.innerHTML.includes('Fahrenheit')) {
@@ -39,6 +47,11 @@ tombolReset.addEventListener('click', (e) => {
 
 tombolReverse.addEventListener('click', (e) => {
     e.preventDefault();
+
+    if(!except.classList.contains('active-except')){
+        except.classList.toggle('active-except');
+        exceptBorder.classList.toggle('act-except');
+    }
 
     let tempLabel = labelCelcius.innerHTML;
     labelCelcius.innerHTML = labelFahrenheit.innerHTML;
