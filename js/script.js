@@ -10,6 +10,7 @@ let textCelcius = document.getElementById('input-celcius');
 let textFahrenheit = document.getElementById('output-fahrenheit');
 let caraKalkulasi = document.getElementById('cara-kalkulasi');
 
+// function untuk mengkonversi suhu
 function konversiSuhu(){
     let value = textCelcius.value.trim();
 
@@ -33,11 +34,13 @@ function konversiSuhu(){
     }
 }
 
+// click konversi
 tombolKonversi.addEventListener('click', (e) => {
     e.preventDefault();
     konversiSuhu();
 });
 
+// click reset
 tombolReset.addEventListener('click', (e) => {
     e.preventDefault();
     textCelcius.value = "";
@@ -45,6 +48,7 @@ tombolReset.addEventListener('click', (e) => {
     caraKalkulasi.value = "";
 });
 
+// click reverse
 tombolReverse.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -72,6 +76,7 @@ tombolReverse.addEventListener('click', (e) => {
     konversiSuhu();
 });
 
+// untuk mengubah penjelasan cara kalkulasi antara celcius ke/dari fahrenheit
 const tombolFkeC = document.querySelector('.f-ke-c');
 const tombolCkeF = document.querySelector('.c-ke-f');
 const toggleElements = document.querySelectorAll('.f-ke-c, .c-ke-f, .cara-c-f, .cara-f-c, .c-f, .f-c');
